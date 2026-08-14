@@ -1,7 +1,7 @@
 def main():
     while True:
         numbers = get_numbers()
-    
+
         if not numbers:
             print("No valid numbers entered.")
         else:
