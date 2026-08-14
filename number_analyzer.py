@@ -9,20 +9,26 @@ def main():
             display_results(numbers, statistics)
   
         again = input("\nDo you want to analyze more numbers? (y/n): ").strip().lower()
+        
+        print()
     
         if again != "y":
             print("Goodbye!")
+            print()
             break
     
 def get_numbers():
     numbers_list = []
     user_input = input("Enter numbers separated with spaces: ")
+    print()
     
     for item in user_input.split():
       try:
           numbers_list.append(int(item))
       except ValueError:
           print(f"{item} is not a valid number")
+
+    print()
     return numbers_list
 
 def analyze_number(number):
@@ -60,12 +66,10 @@ def calculate_statistics(numbers):
             negative += 1
   
     total = sum(numbers)
-    
-    if len(numbers) > 0:
+    if numbers:
         average = total/len(numbers)
     else:
         average = None
-      
     return {
         "even": even,
         "odd" : odd,
@@ -77,7 +81,7 @@ def calculate_statistics(numbers):
         }
 
 def display_results(numbers, statistics):
-    print("\n========== Number Analyer ==========\n")
+    print("\n========== Number Analyzer ==========\n")
     
     for number in numbers:
         parity, sign = analyze_number(number)
@@ -91,14 +95,7 @@ def display_results(numbers, statistics):
     print(f"Positive: {statistics['positive']}")
     print(f"Negative: {statistics['negative']}")
     print(f"Sum:      {statistics['sum']}")
-    print(f"Average:  {statistics['average']}")
+    print(f"Average:  {statistics['average']:.2f}")
 
 if __name__ == "__main__":
     main()
-    
-"""
-Number Analyzer
-
-Analyzes user-provided integers and calculates
-basic statistics such as parity, sign, sum, and average
-"""

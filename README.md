@@ -83,7 +83,7 @@ Positive:  3
 Negative: 1
 Zero:      1
 Sum:       34
-Average:   6.8
+Average:   6.80
 
 Do you want to analyze more numbers? (y/n):
 ```
