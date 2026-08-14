@@ -3,9 +3,10 @@
 A Python program that analyzes user-provided numbers and calculates basic statistics.
 
 ## Features
+
 - Checks whether numbers are even or odd
 - Checks whether numbers are positive, negative, or zero
-- Accepts multipule numbers at once
+- Accepts multiple numbers at once
 - Handles invalid input
 - Calculates:
   - Number of even numbers
@@ -20,14 +21,28 @@ A Python program that analyzes user-provided numbers and calculates basic statis
 ## Technologies
 
 - Python 3
+- `unittest`
 
 ## How to Run
 
 1. Make sure Python 3 is installed.
-2. Clone this repository
+2. Clone this repository:
 
 ```bash
-git clone 
+git clone https://github.com/A-mohamad-dev/number-analyzer.git
+```
+
+3. Open the project folder:
+
+```bash
+cd number-analyzer
+```
+
+4. Run the program:
+
+```bash
+python number_analyzer.py
+```
 
 ## Testing
 
@@ -45,9 +60,11 @@ To run the tests, open a terminal in the project folder and run:
 
 ```bash
 python -m unittest
+```
 
 ## Example
 
+```text
 Enter numbers separated with spaces: 5 -8 0 13 24
 
 ========== Number Analyzer ==========
@@ -63,31 +80,43 @@ Enter numbers separated with spaces: 5 -8 0 13 24
 Even:      3
 Odd:       2
 Positive:  3
-Negative:  1
+Negative: 1
 Zero:      1
 Sum:       34
 Average:   6.8
 
 Do you want to analyze more numbers? (y/n):
+```
+
+## Project Structure
+
+```text
+number-analyzer/
+├── number_analyzer.py
+├── test_number_analyzer.py
+├── README.md
+└── .gitignore
+```
 
 ## What I Learned
 
 This project helped me practice:
-  
- - Function
- - Lists
- - Loops
- - Conditional statements
- - Exception handling
- - Dictionaries
- - User input
- - Basic statistics
- - Function decomposition
- - Returning data from functions
+
+- Functions
+- Lists
+- Loops
+- Conditional statements
+- Exception handling
+- Dictionaries
+- User input
+- Basic statistics
+- Function decomposition
+- Returning data from functions
+- Unit testing
+- Git and GitHub
 
 ## Future Improvements
 
-- Add automated tests 
 - Add more statistical calculations
 - Improve input validation
 - Add a graphical user interface
